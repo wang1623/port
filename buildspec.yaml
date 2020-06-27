@@ -6,7 +6,7 @@ phses:
       - echo Nothing to do yet
 artifacts:
   files:
-    - index.html
-    - favicon.favicon
-    - styles/main.css
-    - images/*
+    - src/index.html
+    - src/favicon.favicon
+    - src/styles/main.css
+    - src/images/*
