@@ -4,6 +4,8 @@ import StringIO
 import zipfile
 import mimetypes
 
+codepipeline = boto3.client('codepipeline')
+
 def lambda_handler(event, context):
 
     location = {
@@ -12,6 +14,7 @@ def lambda_handler(event, context):
     }
 
     job = event.get("CodePipeline.job")
+
     if job:
         for artifact in job["data"]["inputArtifacts"]:
             if artifact["name"] == "BuildArtifact":
@@ -34,6 +37,6 @@ def lambda_handler(event, context):
             portfolio_bucket.Object(file).Acl().put(ACL='public-read')
 
     if job:
-        codepipeline = boto3.client('codepipeline')
-        codepipeline.put_job_success_result(jobId=jon["id"])
+        codepipeline.put_job_success_result(jobId=job["id"])
+
     return 'Success'
