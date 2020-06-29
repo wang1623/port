@@ -8,7 +8,7 @@ phses:
 artifacts:
   files:
     - index.html
-    - favicon.favicon
+    - favicon.ico
     - styles/main.css
     - images/*
     - dist/bundle.js
