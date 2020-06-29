@@ -7,8 +7,8 @@ phses:
       - npm run webpack
 artifacts:
   files:
-    - src/index.html
-    - src/favicon.favicon
-    - src/styles/main.css
-    - src/images/*
+    - index.html
+    - favicon.favicon
+    - styles/main.css
+    - images/*
     - dist/bundle.js
