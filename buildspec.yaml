@@ -3,10 +3,12 @@ version: 0.1
 phses:
   build:
     commands:
-      - echo Nothing to do yet
+      - npm install
+      - npm run webpack
 artifacts:
   files:
     - src/index.html
     - src/favicon.favicon
     - src/styles/main.css
     - src/images/*
+    - dist/bundle.js
